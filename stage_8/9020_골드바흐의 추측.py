@@ -12,14 +12,16 @@ for i in range(n):
                 break
 
 T = int(input()) 
+dict_ans = {}
 for test_case in range(1, T + 1):
     N = int(input())
     li_num = [k for k in range(N) if prime_list[k]]
-    for i in range(len(li_num)):       
-        for j in range(len(li_num)):
+    for i in li_num:       
+        for j in li_num:
             if i + j == N:
-                print(i, j)
-                break
-    
+                dict_ans[(i, j)] = i * j
+    max_ans = max(dict_ans, key = dict_ans.get)
+    ans = ' '.join(map(str, max_ans))
+    print(ans)
         
       
