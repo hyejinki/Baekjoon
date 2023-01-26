@@ -11,17 +11,32 @@ for i in range(n):
                 prime_list[i] = 0
                 break
 
-T = int(input()) 
-dict_ans = {}
-for test_case in range(1, T + 1):
-    N = int(input())
-    li_num = [k for k in range(N) if prime_list[k]]
-    for i in li_num:       
-        for j in li_num:
-            if i + j == N:
-                dict_ans[(i, j)] = i * j
-    max_ans = max(dict_ans, key = dict_ans.get)
-    ans = ' '.join(map(str, max_ans))
-    print(ans)
+# import sys
+# T = int(sys.stdin.readline())
+# dict_ans = {}
+# for test_case in range(1, T + 1):
+#     N = int(sys.stdin.readline())
+#     li_num = [k for k in range(N) if prime_list[k]]
+#     for i in li_num:       
+#         for j in li_num:
+#             if i + j == N:
+#                 dict_ans[(i, j)] = i * j
+#     max_ans = max(dict_ans, key = dict_ans.get)
+#     ans = ' '.join(map(str, max_ans))
+#     print(ans)
         
       
+T = int(input())
+for test_case in range(1, T + 1):
+    N = int(input())
+    less = more = N // 2
+    while 1:
+        if prime_list[less] and prime_list[more]:
+            print(less, more)
+            break
+        elif less == 1 or more == N:
+            break
+        else:
+            less -= 1
+            more += 1
+
