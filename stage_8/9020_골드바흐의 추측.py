@@ -24,19 +24,21 @@ for i in range(n):
 #     max_ans = max(dict_ans, key = dict_ans.get)
 #     ans = ' '.join(map(str, max_ans))
 #     print(ans)
+
+# N을 2로 나눈 값부터 하나씩 멀어지면서 둘 다 소수인 쌍을 찾는다.
         
       
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
-    less = more = N // 2
+    less = more = N // 2  
     while 1:
-        if prime_list[less] and prime_list[more]:
+        if prime_list[less] and prime_list[more]: # 둘 다 소수라면 출력
             print(less, more)
             break
-        elif less == 1 or more == N:
+        elif less == 1 or more == N:  # 종료 조건
             break
-        else:
+        else:   # 하나씩 멀어짐
             less -= 1
             more += 1
 
