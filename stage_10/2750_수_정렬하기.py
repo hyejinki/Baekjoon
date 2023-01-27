@@ -3,7 +3,7 @@
 
 N = int(input())
 num_list = []
-for i in range(N):
+for _ in range(N):
     num = int(input())
     num_list.append(num)
 print(*(sorted(num_list)), sep = '\n')  # unpacking operator

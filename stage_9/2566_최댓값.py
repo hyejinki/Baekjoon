@@ -13,6 +13,7 @@
 # print(max_value)
 # print(row, col) 
 
+# 9x9 행렬 입력 받고
 
 my_list = [list(map(int, input().split())) for _ in range(9)]
 max_value = 0
