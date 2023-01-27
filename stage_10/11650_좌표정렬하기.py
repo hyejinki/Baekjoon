@@ -5,8 +5,15 @@
 
 N = int(input())
 list_x = []
-list_coor = [list(map(int, input().split())) for _ in range(N)]
+list_coordi = [list(map(int, input().split())) for _ in range(N)]
+list_coordi.sort()
+for i in range(len(list_coordi) - 1):
+    list_coordi[i][0] == list_coordi[i + 1][0]
+    list_coordi.sort()  # 뒤에 나오는 값 수정해야됨
+print(list_coordi)
 
-for i in range(N):
-    list_x.append(list_coor[i][0])
+# for 
+# if list_coordi[0] == 
+# for i in range(N):
+#     list_x.append(list_coordi[i][0])
 
