@@ -10,26 +10,17 @@ def median(num_list):
     num = sorted(num_list)[int(n)]
     return num
 
-# 최빈값 함수
-def mode(num_list): 
-    new_list = []
-    list_max = []
-    for i in num_list:
-        list_max.append(abs(i))
-        max_value = max(list_max) # 리스트에서 가장 큰 값
-    list_value = [0]*(max_value) #가장 큰 값 만큼의 개수를 가진 리스트 생성
-    for j in num_list:
-        list_value[j] += 1  #해당 인덱스에 개수만큼 카운트
-# 0이 아닌 값을 가진 인덱스만 또 따로 new리스트에 추가
-    for k in list_value:    
-        if k != 0:
-            new_list.append(k)
-# 뉴 리스트 길이가 1이라면 == 입력 숫자가 하나밖에 없었다면            
-    if len(new_list) == 1:
-        return num_list[0]
-# 최빈수가 2개 이상이면 두번째로 작은 값을 출력
-    elif len(new_list) >= 2:    
-        sorted(new_list)
+# 최빈값 함
+def mode(num_list):
+    dic_count = {}
+    for num in num_list:
+        if num not in dic_count:    # 리스트의 숫자가 디렉토리에 없으면 
+            dic_count[num] = 1      # 디렉토리에 num : 1 을 추가한다.
+        else:
+            dic_count[num] += 1      # 있다면, value + 1
+    # 가장 큰 value == key가 최빈수
+    max_key = max(dic_count, key=dic_count.get)
+    return max_key
 
 
 # 범위 함수

@@ -3,3 +3,11 @@
 # 1. 길이가 짧은 것부터
 # 2. 길이가 같으면 사전 순으로
 
+N = int(input())
+word_list = []
+for i in range(N):
+    word_list.append(input())
+word_list = list(set(word_list)) # 중복 제거
+# 길이로 정렬, 알파벳으로 정렬
+word_list.sort(key= lambda x: (len(x), x))
+print(*word_list, sep='\n') # 요소만 한 줄씩 띄어서 출력
