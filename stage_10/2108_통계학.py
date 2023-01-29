@@ -10,7 +10,7 @@ def median(num_list):
     num = sorted(num_list)[int(n)]
     return num
 
-# 최빈값 함
+# 최빈값 함수
 def mode(num_list):
     dic_count = {}
     for num in num_list:
@@ -28,10 +28,12 @@ def ran(num_list):
     n = max(num_list) - min(num_list)
     return n
 
+
+import sys
 num_list = []
-T = int(input())
+T = int(sys.stdin.readline())
 for test_case in range(1, T + 1):
-    num = int(input())
+    num = int(sys.stdin.readline())
     num_list.append(num)
 
 print(mean(num_list))
