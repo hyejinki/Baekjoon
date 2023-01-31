@@ -10,7 +10,5 @@ def fibonacci(n):
     else: 
         return (fibonacci(n - 2) + fibonacci(n - 1))
 
-
-
 n = int(input())
 print(fibonacci(n))

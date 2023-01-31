@@ -6,6 +6,5 @@ def factorial(N):
         return 1        # 0 이면 리턴 1
     return N * factorial(N - 1)
 
-
 N = int(input())
 print(factorial(N))
