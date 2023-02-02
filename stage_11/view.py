@@ -6,7 +6,7 @@ for test_case in range(1, 11):
     
     for i in range(N-4):
         maxV = 0
-        subV = 0
+
         for j in range(i, i+5):
             if maxV < arr[j] and i + 2 != j:
                 maxV = arr[j]
