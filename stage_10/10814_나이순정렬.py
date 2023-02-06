@@ -8,8 +8,8 @@ N = int(input())
 li_info = []
 for test_case in range(N):
     info = input().split()
+  
     li_info.append(info)
-
 li_info.sort(key= lambda x: int(x[0])) # int를 안해줘서 계속 틀렸다.
 
 for i in li_info:
