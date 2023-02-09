@@ -40,3 +40,4 @@ for word in arr2:           # 검사해야 할 단어가 sample의 value == 1이
 #         count += 1
 
 # print(count)
+
