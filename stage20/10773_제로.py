@@ -1,8 +1,9 @@
-K = int(input())
+import sys
+K = int(sys.stdin.readline())
 stack = [0] * K             # K 크기 만큼의 스택
 top = -1
 for i in range(K):
-    num = int(input())
+    num = int((sys.stdin.readline()))
     if num != 0:                # 0이 아닌 수는  push
         top += 1
         stack[top] = num
