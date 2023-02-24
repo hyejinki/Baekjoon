@@ -6,7 +6,7 @@ for _ in range(T):
     n = int(sys.stdin.readline())       # 배열 크기
     arr = deque(sys.stdin.readline().strip('[').strip().strip(']').split(','))
     print(type(arr))
-    for i in range(len(p)):
+    for i in range(len(p)):  # 홀수일 때만 'R' 돌리기
         if p[i] == 'R':     # 순서 뒤집기
             arr.reverse()
     
