@@ -18,8 +18,8 @@ def bfs(N, M):
     for i in range(N):
         if 0 in visited[i]:
             return -1
-        else:
-            return v - 1
+    else:
+        return v - 1
 
 M, N = map(int, input().split())
 tmt = [list(map(int, input().split()))for _ in range(N)]
