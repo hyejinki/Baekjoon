@@ -7,4 +7,4 @@ for i in range(1, N + 1):
         if A[i - 1] > A[j]:
             dp[i] = max(dp[j] + 1, dp[i])
             
-print(max(dp))
+print(max(dp)) 
