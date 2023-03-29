@@ -17,13 +17,13 @@ def f(i):       # i 는 리스트 길이
     
 N = (int(input()))
 ans = ['0'] * 81
-num = [i for i in range(81)]
+num = [1, 2, 3]
 ans[1] = '1'
 ans[2] = '12'
 ans[3] = '121'
 if N > 3:
     x = 4
-    i = 1
+    i = 0
     while x <= N:
         if num[i] != int(ans[x-1][-1]):
             ans[x] = ans[x-1] + str(num[i])
@@ -36,3 +36,5 @@ if N > 3:
             i += 1
 
 print(int(ans[N]))
+
+
