@@ -1,5 +1,9 @@
 # This is a sample Python script.
 import heapq
+import sys
+
+
+
 def f(start):
     heap = []
     heapq.heappush(heap, (0, start))
