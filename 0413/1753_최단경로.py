@@ -1,4 +1,4 @@
-# This is a sample Python script.
+import sys
 import heapq
 def f(start):
     heap = []
@@ -15,14 +15,14 @@ def f(start):
     return
 
 
-V, E = map(int, input().split())
+V, E = map(int, sys.stdin.readline().split())
 s = int(input())
 INF = 10 * V + 1
 wt = [INF] * (V + 1)
 wt[s] = 0
 adjL = [[] for _ in range(V + 1)]
 for _ in range(E):
-    u, v, w = map(int, input().split())
+    u, v, w = map(int, sys.stdin.readline().split())
     adjL[u].append((v, w))
 
 f(s)
