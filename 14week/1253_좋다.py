@@ -1,26 +1,20 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline())
-arr = list(map(int, sys.stdin.readline().split()))
-arr.sort()
-cnt = 0
-# sum = set()
-# for i in range(len(arr) - 1):
-#     for j in range(i + 1, len(arr)):
-#         if (arr[i] + arr[j]) <= max(arr):
-#             sum.add((arr[i] + arr[j]))
-# cnt = 0
-# for x in arr:
-#     if x in sum:
-#         cnt += 1
+N = int(input())
 
-for i in range(len(arr) -1):
-    for j in range(i + 1, len(arr)):
-        if arr[j] > arr[i]:
-            break:
-
-
-
-
-
-print(cnt)
+arr = list(map(int, input().split()))
+if sum(arr):        # 모두 0 이면 답은 N
+    hash = {}
+    for i in range(N):      # 인덱스 저장
+      hash[arr[i]] = i
+    cnt = 0
+    for i in range(N):
+        for j in range(N):
+          add = arr[i] - arr[j] 
+          if i!= j and add in hash and hash[add] != i and hash[add] != j:       # 자신이 아닌 숫자와 뺐을 때, 값이 뺀값과 자신이 아니면서 hash내부에 있으면 ++
+            cnt += 1
+            break       # 하나만 있어도 좋은 수
+    print(cnt)
+else:
+    print(N)
