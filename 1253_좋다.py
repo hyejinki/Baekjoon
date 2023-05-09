@@ -14,7 +14,7 @@ for x in arr:
     while i < j and j < N - 1:
         if temp[i] + temp[j] == x:
             cnt += 1
-            i += 1
+          
             break
         elif temp[i] + temp[j] < x:
             i += 1
